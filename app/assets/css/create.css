@@ -72,6 +72,25 @@ p{
     margin: 20px;
 
 }
+.error{
+    display: flex;
+    width: 90%;
+    background-color: palevioletred;
+    height: 15vh;
+    text-align: center;
+    box-shadow: 2px 2px 2px black;
+    border: 2px solid slategrey;
+    border-radius: 20px;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    
+}
+.error p{
+    
+    font-size: 15pt;
+    color: silver;
+}
 .form{
     width: 100%;
     margin: 80px;
