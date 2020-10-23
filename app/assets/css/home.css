@@ -31,7 +31,9 @@ nav{
     align-items: center;
     flex-wrap: wrap;
 }
-
+.menu img{
+    width: auto;
+}
 .menu a {
     color: cyan;
     text-align: center;
@@ -144,6 +146,7 @@ main p{
     
 }
 main img{
+    
     box-shadow: 2px 2px 5px black;
 }
 main a{
