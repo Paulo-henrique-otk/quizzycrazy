@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+main{
+    text-align: center;
+    margin: 50px;
+}
+h1{
+    font-size: 3rem;
+    font-family: monospace;
+    color:red;
+}
+p{
+    margin: 50px;
+    font-size: 15pt;
+    color:slategray;
+}
+a{
+    font-size: 15pt;
+    background-color: slategray;
+    color: springgreen;
+    padding: 10px;
+    border: 5px solid orangered;
+    border-radius: 10px;
+}
+img{
+    margin-top: 40px;
+    width:95%;
+    height: 450px;
+    box-shadow: 2px 2px 2px black;
+}

@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+}
+main{
+    margin: 50px;
+}
+strong{
+    font-size: 3rem;
+    color:red;
+
+}
+p{
+    margin: 20px;
+    font-size: 15pt;
+    font-family: monospace;
+}
+a{
+    display:block;
+    margin: 20px;
+font-size: 18pt;
+font-weight: bold;
+color: palegreen;
+}
+a:hover{
+    color:blueviolet;
+}
+img{
+    width: 70vw;
+    height: 400px;
+    box-shadow: 5px 5px 5px black;
+}
