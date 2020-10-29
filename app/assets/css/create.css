@@ -19,8 +19,7 @@ header{
   flex-wrap: wrap;
 }
 header img{
-    width: 100%;
-    height: 250px;
+max-width: 100%;
 }
 .cabecalho {
    flex-wrap: wrap;
@@ -138,11 +137,11 @@ p{
 }
 .form img{
     width: 100%;
-    height: 400px;
+   max-width: 100%;
     
 }
 .form .imgicon{
-    width: 25%;
+    max-width: 25%;
     height: 100px;
     cursor: pointer;
 }
