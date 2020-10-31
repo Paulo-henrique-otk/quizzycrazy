@@ -51,6 +51,11 @@ h1{
     padding: 20px;
     margin: 50px;
 }
+.Quiz img{
+    max-width: 100%;
+    color: slategray;
+    box-shadow: 3px 3px 3px whitesmoke;
+}
 .Quiz h2,h3,p{
     font-size: 15pt;
     color: slategray;
@@ -63,6 +68,10 @@ h1{
     font-size: 15pt;
     color: black;
     border: 2px solid springgreen;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 .Quiz a:hover{
     background-color: black;

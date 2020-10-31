@@ -144,13 +144,32 @@ main p{
     background-size: 100%;
     background-position: center;
     padding: 10px;
-    font-size: 1em;
     flex-wrap: wrap;
     text-align: center;
     border-radius: 15px;
     justify-content: space-between;
     margin: 80px;
+   
+}
+.semconteudo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: teal;
+    margin-bottom: 30px;
+}
+.semconteudo p{
+    font-size: 12pt;
+}
+.semconteudo a{
+    background-color: teal;
+    border: none;
+}
 
+.semconteudo a:hover{
+    color:aqua;
 }
 main img{
     max-width: 100%;
@@ -172,6 +191,7 @@ main a{
 }
 .conteudo strong,h5{
     margin-bottom: 10px;
+    margin-top:40px;
     font-family: monospace;
     font-size: 1.5em;
     color: darkgrey;
@@ -185,6 +205,7 @@ main a{
 }
 .conteudo a{
  margin: 0 auto;
+ margin-top: 40px;
  border: 3px solid powderblue;
  padding: 10px;
  background-color:purple;
