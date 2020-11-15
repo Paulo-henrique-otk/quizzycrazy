@@ -21,6 +21,9 @@ header {
     
     
 }
+marquee{
+    background-color: aqua;
+}
 nav{
     width: 100%;
     
@@ -137,6 +140,7 @@ main p{
     text-shadow: 1px 1px 1px gray;
 }
 .conteudo{
+    width: 90%;
     display: flex;
     box-shadow: 2px 2px 6px black;
     border:  5px solid coral;
@@ -147,8 +151,9 @@ main p{
     flex-wrap: wrap;
     text-align: center;
     border-radius: 15px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     justify-content: space-between;
-    margin: 80px;
    
 }
 .semconteudo{

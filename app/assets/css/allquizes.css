@@ -48,8 +48,7 @@ h1{
     flex-wrap: wrap;
     margin-top: 60px;
     background-color: black;
-    padding: 20px;
-    margin: 50px;
+    padding: 10px;
 }
 .Quiz img{
     max-width: 100%;
