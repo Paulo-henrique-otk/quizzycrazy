@@ -3,13 +3,13 @@
     padding: 0px;
     text-decoration: none;
     box-sizing: border-box;
-    
+
 }
 
 html,body {
     width: 100%;
     height: 100vh;
-   
+
 }
 
 header {
@@ -18,15 +18,13 @@ header {
     width: 100%;
     height: 450px;
     box-shadow: 3px 3px 3px darkslategrey;
-    
-    
+
+
 }
-marquee{
-    background-color: aqua;
-}
+
 nav{
     width: 100%;
-    
+
 }
 .menu {
     width: 100%;
@@ -68,32 +66,29 @@ nav{
     font-weight: bolder;
     border: 2px solid springgreen;
     border-radius: 40px;
-    -webkit-border-radius: 40px;
-    -moz-border-radius: 40px;
-    -ms-border-radius: 40px;
-    -o-border-radius: 40px;
+
 }
 
 
 input[type=search]{
-margin-top: 10px;
-font-size: 15pt;
-background-color: transparent;
-color: slategray;
-border: none;
-border-bottom: 0.5px solid springgreen;
-font-family: monospace;
-width: 100%;
-font-style: italic;
-outline: none;
+     margin-top: 10px;
+     font-size: clamp(2vw,1rem,8vw);
+     background-color: transparent;
+     color: slategray;
+     border: none;
+     border-bottom: 0.5px solid springgreen;
+     font-family: monospace;
+     width: 100%;
+     font-style: italic;
+     outline: none;
 }
 button{
     margin-top: 20px;
     color: whitesmoke;
     background-color: blue;
-    font-size: 20pt;
+    font-size:20pt;
     cursor: pointer;
-    
+
 }
 
 main {
@@ -103,44 +98,43 @@ main {
 }
 
 h1{
-    font-size: 2rem;
+    font-size:clamp(2vw,1.5rem,8vw);
     color: darkturquoise;
     margin-top: 30px;
     font-family: monospace;
     text-shadow: 2px 2px 2px black;
 }
 h2{
-    font-size: 2rem;
+    font-size:clamp(2vw,1.5rem,8vw);
     color: springgreen;
     margin-top: 30px;
     font-family: monospace;
     text-shadow: 2px 2px 2px black;
 }
 h3{
-    font-size: 2rem;
+    font-size:clamp(2vw,1.5rem,8vw);
     color: brown;
     margin-top: 30px;
     font-family: monospace;
     text-shadow: 2px 2px 2px black;
 }
 h4{
-    font-size: 2rem;
+    font-size:clamp(2vw,1.5rem,8vw);
     color: darkblue;
     margin-top: 30px;
     font-family: monospace;
     text-shadow: 2px 2px 2px black;
 }
 main p{
-    font-size: 1rem;
-    font-weight: bolder;
-    margin: 10px;
+    font-size:clamp(0.5vw,1rem,3.5vw);
     line-height: 60px;
     color:black;
+    margin: 10px;
     font-family: monospace;
     text-shadow: 1px 1px 1px gray;
 }
 .conteudo{
-    width: 90%;
+    max-width: 98%;
     display: flex;
     box-shadow: 2px 2px 6px black;
     border:  5px solid coral;
@@ -154,10 +148,11 @@ main p{
     margin-top: 50px;
     margin-bottom: 50px;
     justify-content: space-between;
-   
+
 }
 .semconteudo{
     display: flex;
+    max-width: 98%;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -166,7 +161,7 @@ main p{
     margin-bottom: 30px;
 }
 .semconteudo p{
-    font-size: 12pt;
+    font-size:clamp(2vw,1rem,5vw);;
 }
 .semconteudo a{
     background-color: teal;
@@ -189,16 +184,12 @@ main a{
     color: slategray;
     margin-bottom: 20px;
     padding: 10px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
 }
 .conteudo strong,h5{
     margin-bottom: 10px;
     margin-top:40px;
     font-family: monospace;
-    font-size: 1.5em;
+    font-size:clamp(2vw,1rem,8vw);
     color: darkgrey;
 
 }
@@ -209,7 +200,7 @@ main a{
 
 }
 .conteudo a{
- margin: 0 auto;
+margin: 0 auto;
  margin-top: 40px;
  border: 3px solid powderblue;
  padding: 10px;

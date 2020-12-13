@@ -13,17 +13,17 @@ main{
     margin: 50px;
 }
 h1{
-    font-size: 3rem;
+    font-size: clamp(7vw,1rem,10vw);
     font-family: monospace;
     color:red;
 }
 p{
     margin: 50px;
-    font-size: 15pt;
+    font-size: clamp(3vw,1rem,8vw);
     color:slategray;
 }
 a{
-    font-size: 15pt;
+    font-size: clamp(2vw,1rem,8vw);
     background-color: slategray;
     color: springgreen;
     padding: 10px;

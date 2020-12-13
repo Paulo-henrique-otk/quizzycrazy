@@ -13,13 +13,13 @@ main{
     margin: 50px;
 }
 strong{
-    font-size: 3rem;
+    font-size: clamp(8vw,1rem,13vw);
     color:red;
 
 }
 p{
     margin: 20px;
-    font-size: 15pt;
+    font-size: clamp(2vw,1rem,5vw);
     font-family: monospace;
 }
 a{
