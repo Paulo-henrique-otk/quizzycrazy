@@ -39,6 +39,8 @@ main{
   }
 }
 
+
+
 h1{
   animation: tracking-in-contract-bck-bottom 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
   font-size: clamp(7vw,1rem,10vw);
@@ -51,7 +53,9 @@ p{
     font-size: clamp(3vw,1rem,8vw);
     color:slategray;
 }
+
 a{
+  
     font-size: clamp(2vw,1rem,8vw);
     background-color: slategray;
     color: springgreen;
