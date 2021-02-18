@@ -33,7 +33,7 @@ body{
 }
 .c-title{
   font-family: monospace;
-  font-size: clamp(3vw,1.5rem,5vw);
+  font-size: clamp(3vw,2rem,5vw);
   color:dimgrey;
 }
 .l-body{
@@ -44,7 +44,7 @@ body{
 }
 .l-title{
   font-family: 'Pangolin', cursive;
-  font-size: clamp(3vw,1rem,6vw);
+  font-size: clamp(3vw,2rem,6vw);
   margin-bottom: 50px;
   color: lightslategray;
 }
@@ -54,7 +54,7 @@ body{
 }
 .quiz__title{
   color: lightslategray;
-  font-size: clamp(3vw,1rem,5vw);
+  font-size: clamp(3vw,2rem,5vw);
   font-family: 'Pangolin', cursive;
   margin-top: 30px;
 }
@@ -90,14 +90,14 @@ body{
   font-family: 'Indie Flower', cursive;
   margin-top: 50px;
   margin-bottom: 50px;
- font-size: clamp(3vw,1rem,5vw);
+ font-size: clamp(3vw,2rem,5vw);
 }
 .quiz__answer{
   font-family: 'Indie Flower', cursive;
   margin-top: 50px;
   margin-bottom: 50px;
   margin-right: 20px;
-  font-size: clamp(3vw,1rem,5vw);
+  font-size: clamp(3vw,2rem,5vw);
 }
 .button-body{
   padding: 10px;
@@ -109,7 +109,7 @@ body{
  border-radius:8px ;
 }
 .quiz__button{
- font-size: clamp(1vw,1rem,3vw);
+ font-size: clamp(1vw,2rem,3vw);
  color:springgreen;
  cursor: pointer;
  font-family: 'Pangolin', cursive;

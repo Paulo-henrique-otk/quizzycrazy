@@ -31,13 +31,13 @@ body{
   font-family: 'Pangolin', cursive;
   color:brown;
   margin-right: 50px;
-  font-size: clamp(5vw,1rem,8vw);
+  font-size: clamp(5vw,2rem,8vw);
 }
 .main__text{
   font-family: 'Indie Flower', cursive;
   color: mediumspringgreen;
   margin-top: 50px;
-  font-size: clamp(2vw,1rem,4vw);
+  font-size: clamp(3vw,2rem,6vw);
 }
 .link-body{
   margin-top: 40px;
@@ -49,7 +49,7 @@ body{
 .main__link{
   color: aqua;
   background-color: brown;
-  font-size: clamp(3vw,1rem,6vw);
+  font-size: clamp(3vw,2rem,6vw);
   font-family: 'Pangolin', cursive;
 }
 .main__link:hover{

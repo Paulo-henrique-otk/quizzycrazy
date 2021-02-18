@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+}
+.information{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.information__title{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: clamp(3vw,2rem,6vw);
+  color: slategray;
+  font-family: 'Pangolin', cursive;
+}
+.section{
+  display: grid;
+  grid-template-columns: auto auto ;
+  grid-template-rows: auto auto ;
+  margin-bottom: 10px;
+  gap: 5px;
+}
+.section__image{
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+.text{
+  margin-top: 10px;
+ display: flex;
+ justify-content: center;
+ flex-wrap: wrap;
+}
+.text__title{
+font-family: 'Pangolin', cursive;
+font-size: clamp(5vw,2rem,10vw);
+color: red;
+}
+.u-color-yellow{
+  color: yellow;
+}
+.text__description{
+font-family: 'Pangolin', cursive;
+font-size: clamp(3vw,2rem,6vw);
+color: slategray;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+.home{
+  margin-top: 20px;
+  text-align: center;
+}
+.link__body{
+  margin-bottom: 20px;
+  padding: 5px;
+  border: 2px solid black;
+  border-radius: 20px;
+
+}
+.home__link{
+  color: yellow;
+  font-size: clamp(4vw,2rem,7vw);
+  font-family: 'Indie Flower', cursive;
+  background-color: red;
+  box-shadow: 3px 3px 3px black;
+}
