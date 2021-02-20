@@ -109,7 +109,7 @@ body{
  border-radius:8px ;
 }
 .quiz__button{
- font-size: clamp(1vw,2rem,3vw);
+ font-size: clamp(1vw,1rem,3vw);
  color:springgreen;
  cursor: pointer;
  font-family: 'Pangolin', cursive;

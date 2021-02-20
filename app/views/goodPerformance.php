@@ -12,12 +12,12 @@
 </head>
 <body>
   <main class="information">
-    <h1 class="information__title">QuizzyCrazy:Pontuação Boa &#x270C</h1>
+    <h1 class="information__title roll-in-blurred-left">QuizzyCrazy:Pontuação Boa &#x270C</h1>
     <section class="section">
-      <img class="section__image" src="../assets/images/R0ab17989bb33bd13fcc720dd3b55a8de.gif" alt="Personagens engraçados dando parabens">
-      <img class="section__image"src="../assets/images/Rb9947287fb67e1b5db8a4d87809862f8.gif" alt="menina animada comemorando">
-      <img class="section__image" src="../assets/images/anime-congratulations-gif-2.gif" alt="menina dando parabens com as mãos">
-      <img class="section__image" src="../assets/images/tumblr_niwsfddqjm1spav39o1_500.gif" alt="menina dando legal e parabenizando">
+      <img class="section__image last__image slit-in-vertical" src="../assets/images/R0ab17989bb33bd13fcc720dd3b55a8de.gif" alt="Personagens engraçados dando parabens">
+      <img class="section__image slit-in-vertical"src="../assets/images/Rb9947287fb67e1b5db8a4d87809862f8.gif" alt="menina animada comemorando">
+      <img class="section__image slit-in-horizontal" src="../assets/images/anime-congratulations-gif-2.gif" alt="menina dando parabens com as mãos">
+      <img class="section__image slit-in-horizontal" src="../assets/images/tumblr_niwsfddqjm1spav39o1_500.gif" alt="menina dando legal e parabenizando">
     </section>
 
   </main>

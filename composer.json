@@ -1,0 +1,29 @@
+{
+    "name": "paulo/quizzycrazy",
+    "description": "Projeto em que voçê não precisa se cadastrar para criar um quiz.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Paulo",
+            "email": "Paulohenriquelg3@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+     "psr-4": {
+    "App\\":"app",
+    "Source\\":"source"
+     },
+     "files": [
+         "config/Config.php"
+     ]
+    },
+    
+    "require": {
+        "coffeecode/router":"1.0.*",
+        "coffeecode/datalayer":"1.1.*",
+        "coffeecode/uploader":"1.0.*",
+        "league/plates":"v4.0.0-alpha"
+    }
+}
