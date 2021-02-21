@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <link rel="shortcut icon" href="../assets/icons/sucesso.svg" type="image/x-icon">
-    <link rel="stylesheet" href="../assets/css/sucess.css">
+    <link rel="icon" href="<?=asset('icons/sucesso.svg')?>" type="image/x-icon">
+    <link rel="stylesheet" href="<?=asset('css/sucess.css')?>">
     <meta charset="UTF-8">
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +11,7 @@
 <body>
     <header>
         <nav>
-            <a href="allquizes.html">Ver Todos</a>
+            <a href="<?=$router->route('s.all')?>">Ver Todos</a>
         </nav>
     </header>
  <main>
@@ -19,7 +19,7 @@
     <p>Obrigado {Nome} Por Criar Um Quiz,Fico Muito Agradecido Por Ajudar Este Site A Ter Mais Conteúdo
     Para Que Voçê e Os Outros Usuários Possam Aproveitar e Se Divertir.Muito Obrigado.   
     </p>
-    <img src="../assets/images/obrigado-transformando-sonhos-em-resultados.png" alt="">
+    <img src="<?=asset('images/obrigado-transformando-sonhos-em-resultados.png')?>" alt="Imagem Mostrando sucesso na criação do quiz ">
  </main>
 
  <footer>

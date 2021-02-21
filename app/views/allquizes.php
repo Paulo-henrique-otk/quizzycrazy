@@ -1,9 +1,9 @@
 <!DOCTYPE html>
  <html lang="pt-BR">
 <head>
-    <link rel="canonical" href="{}">
-    <link rel="stylesheet" href="../assets/css/allquizes.css">
-    <link rel="icon" href="../assets/icons/questionario(4).svg" type="image/x-icon">
+    <link rel="canonical" href="<?=URL?>">
+    <link rel="stylesheet" href="<?=asset("css/allquizes.css")?>" >
+    <link rel="icon" href="<?=asset("icons/questionario(4).svg")?>" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="author" content="Paulo Henrique">
     <meta name="creator" content="Paulo Henrique">
@@ -15,22 +15,22 @@
     <meta property="og:title" content="QuizzyCrazy:Todos os Quizes">
     <meta property="og:description" content="Página Ver Todos Do QuizzyCrazy,aqui Voçê Verá Todos os Quizes Disponíveis,Venha Jogar um Quiz Agora Mesmo.">
     <meta property="og:url" content="">
-    <meta property="og:image" content="../assets/images/QUIZ.jpg">
+    <meta property="og:image" content="<?=asset("images/QUIZ.jpg")?>">
     <meta itemprop="name" content="QuizzyCrazy">
     <meta itemprop="description" content="Página Ver Todos Do QuizzyCrazy,aqui Voçê Verá Todos os Quizes Disponíveis,Venha Jogar um Quiz Agora Mesmo.">
-    <meta itemprop="image" content="../assets/images/QUIZ.jpg">
+    <meta itemprop="image" content="<?=asset("images/QUIZ.jpg")?>">
     <meta name="twitter:title" content="QuizzyCrazy : Plataforma de Quizes">
     <meta name="twitter:description" content="Página Ver Todos Do QuizzyCrazy,aqui Voçê Verá Todos os Quizes Disponíveis,Venha Jogar um Quiz Agora Mesmo.">
     <meta name="twitter:url" content="">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:image" content="../assets/images/QUIZ.jpg">
+    <meta name="twitter:image" content="<?=asset("images/QUIZ.jpg")?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuizzyCrazy : Todos os Quizes </title>
 </head>
 <body>
     <header >
         <nav class="link">
-           <a href="home.html">Home</a>
+           <a href="<?=$router->route('s.home')?>">Home</a>
         </nav>
     </header>
     <main>
@@ -45,16 +45,16 @@
      
        </div>
        <div class="Quiz">
-        <img src="../assets/images/triste-emo.jpg" alt="Imagem do emoji triste" title="Imagem do emoji triste">
+        <img src="<?= asset("images/triste-emo.jpg")?>" alt="Imagem do emoji triste" title="Imagem do emoji triste">
         <p>Sem Quizes por Enquanto,Por Favor Considere Criar Um.</p>
-        <a href="create.html">Criar</a>
+        <a href="<?=$router->route('s.create')?>">Criar</a>
        </div>
        
    </main> 
 <footer>
     <h4>&copy;2020-Direitos Reservados Ao QuizzyCrazy</h4>
 </footer>
- <script src="../assets/js/jquery-3.5.1.min.js"></script> 
- <script src="../assets/js/allquizes.js"> </script> 
+ <script src="<?=asset('js/jquery-3.5.1.min.js')?>"></script> 
+ <script src="<?=asset('js/allquizes.js')?>"> </script> 
 </body>
 </html>

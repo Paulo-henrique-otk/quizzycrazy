@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <link rel="canonical" href="{}">
-    <link rel="stylesheet" href="../assets/css/create.css">
-    <link rel="icon" href="../assets/icons/questionario(6).svg" type="image/x-icon">
+  <link rel="canonical" href="<?=URL?>">
+    <link rel="stylesheet" href="<?= asset("css/create.css")?>">
+    <link rel="icon" href="<?= asset("icons/questionario(6).svg")?>" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="author" content="Paulo Henrique">
     <meta name="creator" content="Paulo Henrique">
@@ -29,11 +29,11 @@
 </head>
 <body>
   <header >
-      <img src="../assets/images/unnamed.jpg" alt="imagem do topo do QuizzyCrazy" title="imagem do topo do QuizzyCrazy">
+      <img src="<?= asset("images/unnamed.jpg")?>" alt="imagem do topo do QuizzyCrazy" title="imagem do topo do QuizzyCrazy">
      
       <nav class="cabecalho">
-         <a class="tracking-in-contract-bck" href="home.html">Home</a>
-         <a class="tracking-in-contract-bck" href="allquizes.html">Ver Todos</a>
+         <a class="tracking-in-contract-bck" href="<?=$router->route('s.home')?>">Home</a>
+         <a class="tracking-in-contract-bck" href="<?=$router->route("s.all")?>">Ver Todos</a>
 
       </nav>
   </header>
@@ -49,7 +49,7 @@
 
     <div class="error"> <p> {Message}</p></div>
     <form class="form" action="" method="post">
-      <img src="../assets/images/wordpress-quiz-plugins-1024x512.png" alt="Imagem Do Formulario de Criação do QuizzyCrazy" title="Imagem Do Formulario de Criação do QuizzyCrazy">
+      <img src="<?=asset("images/wordpress-quiz-plugins-1024x512.png")?>" alt="Imagem Do Formulario de Criação do QuizzyCrazy" title="Imagem Do Formulario de Criação do QuizzyCrazy">
      
         <label for="na">Autor Do Quiz :</label>
         <input type="text" name="nomeAut" id="na" placeholder="Autor Do Quiz">
@@ -233,7 +233,7 @@
         <p>Sim</p>
         <input type="radio" name="status5"  value="resposta25"  >
         <p>Imagem Do Quiz:</p>
-        <label  for="arquivo"><img class="imgicon jello-vertical" src="../assets/images/upload-big-arrow.png" alt="Botão de Upload" title="Botão de Upload"></label>
+        <label  for="arquivo"><img class="imgicon jello-vertical" src="<?=asset("images/upload-big-arrow.png")?>" alt="Botão de Upload" title="Botão de Upload"></label>
         <input type="file" name="Arquivo" id="arquivo">
     <button type="submit">Criar</button>
       
@@ -244,7 +244,7 @@
   <footer>
     <h4>&copy;2020-Direitos Reservados Ao QuizzyCrazy </h4>
   </footer>
-  <script src="../assets/js/jquery-3.5.1.min.js"></script>
-  <script src="../assets/js/create.js"></script>
+  <script src="<?=asset("js/jquery-3.5.1.min.js")?>"></script>
+  <script src="<?=asset("js/create.js")?>"></script>
 </body>
 </html>

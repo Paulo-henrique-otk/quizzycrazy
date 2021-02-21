@@ -2,9 +2,9 @@
 <html lang="pt-BR">
 
 <head>
-    <link rel="canonical" href="{}">
-    <link rel="stylesheet" href="../assets/css/home.css">
-    <link rel="icon" href="../assets/icons/questionario.svg" type="image/x-icon">
+    <link rel="canonical" href="<?=URL?>">
+    <link rel="stylesheet" href="<?= asset("css/home.css")?>">
+    <link rel="icon" href="<?= asset("icons/questionario.svg")?>" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="author" content="Paulo Henrique">
     <meta name="creator" content="Paulo Henrique">
@@ -16,15 +16,15 @@
     <meta property="og:title" content="QuizzyCrazy : Plataforma de Quizes">
     <meta property="og:description" content="QuizzyCrazy é uma Plataforma de Quizes em que Voçê Não Precisa se Cadastrar para criar Um Quiz.">
     <meta property="og:url" content="">
-    <meta propery="og:image" content="../assets/images/shutterstock_1214717467-900x506-1 .jpg">
+    <meta propery="og:image" content="<?= asset("images/titulo_quiz.png")?>">
     <meta itemprop="name" content="QuizzyCrazy">
     <meta itemprop="description" content="QuizzyCrazy é uma Plataforma de Quizes em que Voçê Não Precisa se Cadastrar para criar Um Quiz.">
-    <meta itemprop="image" content="../assets/images/shutterstock_1214717467-900x506-1 .jpg">
+    <meta itemprop="image" content="<?= asset("images/titulo_quiz.png")?>">
     <meta name="twitter:title" content="QuizzyCrazy : Plataforma de Quizes">
     <meta name="twitter:description" content="QuizzyCrazy é uma Plataforma de Quizes em que Voçê Não Precisa se Cadastrar para criar Um Quiz.">
     <meta name="twitter:url" content="">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:image" content="../assets/images/shutterstock_1214717467-900x506-1 .jpg">
+    <meta name="twitter:image" content="<?= asset("images/titulo_quiz.png")?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuizzyCrazy : Plataforma de Quizes</title>
 </head>
@@ -36,9 +36,9 @@
 
         <nav>
             <div class="menu">
-                <img src="../assets/images/titulo_quiz.png" alt="Imagem do Topo do QuizzyCrazy" title="Imagem do Topo do QuizzyCrazy">
+                <img src="<?= asset("images/titulo_quiz.png")?>" alt="Imagem do Topo do QuizzyCrazy" title="Imagem do Topo do QuizzyCrazy">
 
-                <form action="" method="get" autocomplete="off">
+                <form action="" method="get" >
 
                     <input type="search" name="busca" list="quiz" placeholder="Busque um Quiz ">
                     <datalist id="quiz">
@@ -50,7 +50,7 @@
                 </form>
 
 
-                <a href="create.html">Criar Quiz</a>
+                <a href="<?=$router->route("s.create")?>">Criar Quiz</a>
 
             </div>
 
@@ -66,7 +66,7 @@
             Voçê é Bem Vindo A Fazer O Que Mais Interessar Para Voçê ,e Se Não Tiver Nenhum Quiz Ainda Por Favor Considere Criar Um,Muito Obrigado Por Visitar Este Site,Tchau.
         </p>
 
-        <img src="../assets/images/shutterstock_1214717467-900x506-1 .jpg" alt="Imagem principal do QuizzyCrazy" title="Imagem principal do QuizzyCrazy">
+        <img src="<?= asset("images/shutterstock_1214717467-900x506-1 .jpg")?>" alt="Imagem principal do QuizzyCrazy" title="Imagem principal do QuizzyCrazy">
 
         <h4>Confira Aqui Embaixo Os Quizes Novos e Criados Recentemente No QuizzyCrazy: </h4>
         <div class="conteudo">
@@ -81,10 +81,10 @@
         <div class="semconteudo">
 
              <p>Desculpe,estamos sem Conteúdo neste momento Que tal  <a href="create.html">Criar</a> um?</p>
-             <img src="../assets/images/triste-emo.jpg" alt="Imagem do emoji triste" title="Imagem do emoji triste">
+             <img src=<?= asset("images/triste-emo.jpg")?> alt="Imagem do emoji triste" title="Imagem do emoji triste">
       </div>
 
-        <a href="allquizes.html">Ver Todos</a>
+        <a href="<?=$router->route("s.all")?>">Ver Todos</a>
     </main>
   <footer>
   <h6>&copy;2020-Direitos Resevardos Ao QuizzyCrazy.</h6>
@@ -92,9 +92,9 @@
 
   </footer>
 
- <script src="../assets/js/jquery-3.5.1.min.js">
+ <script src="<?= asset("js/jquery-3.5.1.min.js")?>">
  </script>
-<script src="../assets/js/home.js">
+<script src="<?= asset("js/home.js")?>">
 </script>
 </body>
 
