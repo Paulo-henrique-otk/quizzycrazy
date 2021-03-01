@@ -36,20 +36,21 @@
     <main>
        <h1>Todos os Quizes Do QuizzyCrazy</h1>
        <p>Olá,Seja Bem Vindo a Página Ver Todos Do QuizzyCrazy,aqui Voçê Verá Todos os Quizes Disponíveis. </p>
+       <?php $cont=0;  if($cont>0): ?>
        <div class="Quiz">
        <img src="" alt="Imagem do Quiz {nome do quiz}" title=" {Nome do Quiz}">
        <h2>Nome Do Quiz</h2>
        <h3>Nome do Autor</h3>
        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium facere eum omnis harum officia quas iusto temporibus error molestiae facilis doloribus officiis, quaerat corporis? Nemo ut possimus corrupti culpa omnis!</p>
        <a href="">Jogar</a>
-     
+     <?php else: ?>
        </div>
        <div class="Quiz">
         <img src="<?= asset("images/triste-emo.jpg")?>" alt="Imagem do emoji triste" title="Imagem do emoji triste">
         <p>Sem Quizes por Enquanto,Por Favor Considere Criar Um.</p>
         <a href="<?=$router->route('s.create')?>">Criar</a>
        </div>
-       
+       <?php endif; ?>
    </main> 
 <footer>
     <h4>&copy;2020-Direitos Reservados Ao QuizzyCrazy</h4>

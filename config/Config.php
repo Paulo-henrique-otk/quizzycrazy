@@ -3,7 +3,7 @@
     "driver" => "mysql",
     "host" => "localhost",
     "port" => "3306",
-    "dbname" => "database",
+    "dbname" => "quizzycrazy",
     "username" => "root",
     "passwd" => "",
     "options" => [
@@ -16,10 +16,9 @@
 
 define("URL","http://localhost/quizzycrazy");
 
-function asset($path = null):string
-{
-  if ($path) {
-    return "app/assets/{$path}";
+function asset(string $path = null):string{
+  if($path){
+  return URL ."/" . "app/assets/{$path}";
   }
-  return "app/assets/";
+  return URL ."/". "app/assets/";
 } 

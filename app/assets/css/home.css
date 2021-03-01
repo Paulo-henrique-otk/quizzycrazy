@@ -189,6 +189,7 @@ main p{
     padding: 10px;
     background-color: teal;
     margin-bottom: 30px;
+    margin-top: 30px;
 }
 .semconteudo p{
     font-size:clamp(2vw,1rem,5vw);;

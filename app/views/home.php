@@ -42,7 +42,17 @@
 
                     <input type="search" name="busca" list="quiz" placeholder="Busque um Quiz ">
                     <datalist id="quiz">
-                        <option value="Quiz">Quiz</option>
+                        <?php if($quizes):
+                          foreach ($quizes as $quiz) :
+                          ?>
+                        <option value="<?=$quiz->nome_quiz?>"><?=$quiz->nome_quiz?></option>
+                       <?php 
+                       endforeach; 
+                       else :
+                        ?>
+                        <option value=""></option>
+                        <?php
+                       endif;?>
                     </datalist>
                     <button type="submit">Buscar</button>
 
@@ -69,20 +79,26 @@
         <img src="<?= asset("images/shutterstock_1214717467-900x506-1 .jpg")?>" alt="Imagem principal do QuizzyCrazy" title="Imagem principal do QuizzyCrazy">
 
         <h4>Confira Aqui Embaixo Os Quizes Novos e Criados Recentemente No QuizzyCrazy: </h4>
+        <?php  if($quizes):
+        foreach ($quizes as $quiz) :
+        ?>       
         <div class="conteudo">
-            <img src="" alt="Imagem Do QUiz {Nome do Quiz}" title="{nome do Quiz}">
-            <strong>Nome do Author</strong>
-             <h5>Nome Do Quiz</h5>
-             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim molestias libero perferendis, delectus maxime sunt accusamus obcaecati earum quas quis ipsam voluptate, id reprehenderit aliquam. Quisquam harum iusto esse quidem.</p>
-
-             <a href="">Jogar</a>
+            <img src="<?=asset('images/itachi.png')?>" alt="Imagem Do QUiz <?=$quiz->nome_quiz?>" title="<?=$quiz->nome_quiz?>">
+            <strong><?=$quiz->nome_autor?></strong>
+             <h5><?=$quiz->nome_quiz?></h5>
+             <p><?=$quiz->descricao?></p>
+             <a href="<?=$router->route('s.play',["code"=>$quiz->code])?>">Jogar</a>
 
         </div>
+        <?php endforeach;?>
+        <?php
+         else:?>
         <div class="semconteudo">
 
-             <p>Desculpe,estamos sem Conteúdo neste momento Que tal  <a href="create.html">Criar</a> um?</p>
+             <p>Desculpe,estamos sem Conteúdo neste momento Que tal  <a href=<?=$router->route('s.create')?>>Criar</a> um?</p>
              <img src=<?= asset("images/triste-emo.jpg")?> alt="Imagem do emoji triste" title="Imagem do emoji triste">
       </div>
+      <?php endif;?>
 
         <a href="<?=$router->route("s.all")?>">Ver Todos</a>
     </main>

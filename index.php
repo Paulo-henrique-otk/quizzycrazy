@@ -8,16 +8,15 @@ $router = new Router(URL);
 $router->namespace("App\Controllers");
 
 ob_start();
-
+//Screens Routes
 $router->group(null);
 $router->get("/","Screens:home","s.home");
 $router->get("/create","Screens:create","s.create");
 $router->get("/all","Screens:allquizes","s.all");
 $router->get("/sucess","Screens:sucess","s.sucess");
-
-
-$router->get("/error/{error}","Screens:error");
-
+$router->get("/play/{code}","Screens:play","s.play");
+//Error Route
+$router->get("/error/{error}","Screens:error","s.error");
 ob_end_flush();
 $router->dispatch();
 

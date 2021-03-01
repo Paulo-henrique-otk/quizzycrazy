@@ -70,7 +70,7 @@
         <input type="text" name="resposta1" id="resposta1">
         <p>Correta?</p>
         <p>Sim</p>
-        <input type="radio" name="status1"value="resposta1" >
+        <input type="radio" name="status1" value="resposta1" >
         
         
         <label for="resposta2"> 2° Resposta :</label>

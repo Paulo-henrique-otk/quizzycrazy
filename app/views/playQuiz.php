@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <link rel="stylesheet" href="../assets/css/playQuiz.css">
-  <link rel=" icon" href="../assets/icons/questionario(2).svg" type="image/x-icon">
+  <link rel="stylesheet" href="<?=asset('css/playQuiz.css')?>">
+  <link rel=" icon" href="<?=asset('icons/questionario(2).svg')?>" type="image/x-icon">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="author" content="Paulo Henrique">
@@ -24,24 +24,24 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:image" content="">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> QuizzyCrazy:{Quiz name}</title>
+  <title> QuizzyCrazy:<?=$quiz->nome_quiz?></title>
 </head>
 <body>
   <header class="c-body c-header">
-   <h1 class="c-title slide-in-top">QuizzyCrazy:{QuizName}</h1>
+   <h1 class="c-title slide-in-top">QuizzyCrazy:<?=$quiz->nome_quiz?></h1>
   </header>
 
   <section class=" l-body  js-main" >
-    <h2 class="l-title"> Aproveite o Quiz:{Quiz name} feito por {autor name}.</h2>
-    <img class="u-max-width-100" src="../assets/images/jigsaw-phishing-quiz_sm.jpg" alt="imagem que diz quiz time ">
+    <h2 class="l-title"> Aproveite o Quiz:<?=$quiz->nome_quiz?> feito por <?=$quiz->nome_autor?>.</h2>
+    <img class="u-max-width-100" src="<?=asset('images/jigsaw-phishing-quiz_sm.jpg')?>" alt="imagem que diz quiz time ">
 
   </section>
 
   <main class="quiz">
-    <h3 class="quiz__title u-color-brown">Shingeki no Kyojin 3° Temporada.</h3>
-    <h4 class="quiz__title">Paulo Henrique</h4>
-    <p class="quiz__title quiz__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis eveniet veniam molestiae obcaecati vel deleniti delectus magni, odio voluptatibus velit nam nihil exercitationem ab dolor voluptatum quo provident iste officiis!</p>
-    <img class=" u-max-width-100 u-clip-path-circle" src="../assets/images/attack-on-titan-season-3-characters-poster.jpg" alt="imagem do Quiz {quizname}"  >
+    <h3 class="quiz__title u-color-brown"><?=$quiz->nome_quiz?></h3>
+    <h4 class="quiz__title"><?=$quiz->nome_autor?></h4>
+    <p class="quiz__title quiz__description"><?=$quiz->descricao?></p>
+    <img class=" u-max-width-100 u-clip-path-circle" src="<?=asset('images/attack-on-titan-season-3-characters-poster.jpg"')?>" alt="imagem do Quiz {quizname}"  >
    <form action="" method="post" class="quiz__form">
     <p class="quiz__question">Pergunta</p>
     <label for="" class="quiz__answer">

@@ -1,21 +1,17 @@
 <?php
 namespace App\Controllers;
+use Source\Models\Quiz;
 use Source\Validators\Error404Validation;
 
 class Screens extends Controller{
-  
+
   function __construct($router)
   {
-    parent::__construct($router);
+  parent::__construct($router);
   }
-  private function showScreen(string $screenName,$screenData = null):string{
-    if($screenData){
-    return $this->view->render($screenName,$screenData);
-    }
-    return $this->view->render($screenName);
-  } 
   public function home():void{
-  echo $this->showScreen("home");
+  $quizes = $this->MakeInstaceOfQuiz();
+  echo $this->showScreen("home",["quizes"=>$quizes->find()->fetch(true)]);
   }
   public function create():void{
   echo $this->showScreen("create");
@@ -26,13 +22,25 @@ class Screens extends Controller{
   public function sucess():void{
   echo  $this->showScreen("sucess");
   }
+  public function play(array $data):void{
+  $code = $data["code"];
+  $quiz = ($this->MakeInstaceOfQuiz())->find("code =:e","e={$code}")
+  ->limit(15)
+  ->fetch();
+  if(!empty($quiz)){
+  echo $this->showScreen("playQuiz",["quiz"=>$quiz]);
+  }
+  else{
+  $this->router->redirect($this->router->route('s.error', ["error"=>400]));
+  }
+  }
   public function error(array $data):void{
   $errorNumber = $data["error"];
   if(Error404Validation::is404Error($errorNumber)){
   echo $this->showScreen("error404");
   }
   else{
-  echo $this->showScreen("error",["error"=>$data["error"]]);
+  echo $this->showScreen("error",["errorNumber"=>$errorNumber]);
   }
-}
+  }
 }
