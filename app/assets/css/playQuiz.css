@@ -97,6 +97,7 @@ body{
   margin-top: 50px;
   margin-bottom: 50px;
   margin-right: 20px;
+  margin-left: 20px;
   font-size: clamp(3vw,2rem,5vw);
 }
 .button-body{

@@ -17,7 +17,8 @@ class Screens extends Controller{
   echo $this->showScreen("create");
   }
   public function allquizes():void{
-  echo  $this->showScreen("allquizes");
+  $quizes = ($this->MakeInstaceOfQuiz())->find()->fetch(true);
+  echo  $this->showScreen("allquizes",["quizes"=>$quizes]);
   }
   public function sucess():void{
   echo  $this->showScreen("sucess");
@@ -35,7 +36,7 @@ class Screens extends Controller{
   }
   }
   public function error(array $data):void{
-  $errorNumber = $data["error"];
+  $errorNumber = filter_var($data["error"],FILTER_VALIDATE_INT);
   if(Error404Validation::is404Error($errorNumber)){
   echo $this->showScreen("error404");
   }

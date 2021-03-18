@@ -38,7 +38,7 @@
             <div class="menu">
                 <img src="<?= asset("images/titulo_quiz.png")?>" alt="Imagem do Topo do QuizzyCrazy" title="Imagem do Topo do QuizzyCrazy">
 
-                <form action="" method="get" >
+                <form action="<?=$router->route('q.search.post')?>" method="post" >
 
                     <input type="search" name="busca" list="quiz" placeholder="Busque um Quiz ">
                     <datalist id="quiz">

@@ -8,11 +8,11 @@ use Source\Factorys\QuizFactory;
 
 abstract class Controller{
   /** @var Engine */
-  protected $view;
+  private $view;
   /** @var Router */
   protected $router;
   /** @var QuizFactory */
-  protected $quizFactory;
+  private $quizFactory;
 
   function __construct($router,string $directory = __DIR__ . "/../views")
   {
