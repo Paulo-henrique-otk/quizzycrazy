@@ -6,7 +6,7 @@ use Source\Models\Quiz;
 
 class QuizFactory implements Factory{
  
-  public function MakeInstace(): DataLayer
+  public function MakeInstance(): DataLayer
   {
     return new Quiz();
   }

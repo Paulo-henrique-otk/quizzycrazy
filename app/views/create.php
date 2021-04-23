@@ -48,7 +48,7 @@
     </p>
 
     <div class="error"> <p> {Message}</p></div>
-    <form class="form" action="" method="post">
+    <form class="form" action="<?=$router->route("save.q")?>" method="post">
       <img src="<?=asset("images/wordpress-quiz-plugins-1024x512.png")?>" alt="Imagem Do Formulario de Criação do QuizzyCrazy" title="Imagem Do Formulario de Criação do QuizzyCrazy">
      
         <label for="na">Autor Do Quiz :</label>

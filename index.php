@@ -18,6 +18,7 @@ $router->get("/play/{code}","Screens:play","s.play");
 $router->get("/search/{busca}","QuizController:searchGet","q.search.get");
 //Post Routes
 $router->post("/search","QuizController:search","q.search.post");
+$router->post("/save","QuizController:saveQuiz","save.q");
 //Error Route
 $router->get("/error/{error}","Screens:error","s.error");
 ob_end_flush();

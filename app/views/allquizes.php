@@ -45,6 +45,7 @@
        <h3><?=$quiz->nome_autor?></h3>
        <p><?=$quiz->descricao?></p>
        <a href="<?=$router->route('s.play', ["code"=>$quiz->code])?>">Jogar</a>
+       </div>
      <?php
     endforeach;
     else: ?>

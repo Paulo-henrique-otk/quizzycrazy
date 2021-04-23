@@ -10,22 +10,22 @@ class Screens extends Controller{
   parent::__construct($router);
   }
   public function home():void{
-  $quizes = $this->MakeInstaceOfQuiz();
-  echo $this->showScreen("home",["quizes"=>$quizes->find()->fetch(true)]);
+  $quizes = $this->MakeInstanceOfQuiz()->find()->fetch(true);
+  echo $this->showScreen("home",["quizes"=>$quizes]);
   }
   public function create():void{
   echo $this->showScreen("create");
   }
   public function allquizes():void{
-  $quizes = ($this->MakeInstaceOfQuiz())->find()->fetch(true);
+  $quizes = ($this->MakeInstanceOfQuiz())->find()->fetch(true);
   echo  $this->showScreen("allquizes",["quizes"=>$quizes]);
   }
   public function sucess():void{
   echo  $this->showScreen("sucess");
   }
   public function play(array $data):void{
-  $code = $data["code"];
-  $quiz = ($this->MakeInstaceOfQuiz())->find("code =:e","e={$code}")
+  $code = filter_var($data["code"],FILTER_SANITIZE_STRIPPED);
+  $quiz = ($this->MakeInstanceOfQuiz())->find("code =:e","e={$code}")
   ->limit(15)
   ->fetch();
   if(!empty($quiz)){

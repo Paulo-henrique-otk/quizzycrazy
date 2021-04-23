@@ -28,7 +28,7 @@ abstract class Controller{
   }
   return $this->view->render($screenName);
   } 
-  protected function MakeInstaceOfQuiz():DataLayer{
-  return $this->quizFactory->MakeInstace();
+  protected function MakeInstanceOfQuiz():DataLayer{
+  return $this->quizFactory->MakeInstance();
   }
 }
