@@ -39,7 +39,7 @@
                 <img src="<?= asset("images/titulo_quiz.png")?>" alt="Imagem do Topo do QuizzyCrazy" title="Imagem do Topo do QuizzyCrazy">
 
                 <form action="<?=$router->route('q.search.post')?>" method="post" >
-
+                
                     <input type="search" name="busca" list="quiz" placeholder="Busque um Quiz ">
                     <datalist id="quiz">
                         <?php if($quizes):
@@ -63,6 +63,7 @@
                 <a href="<?=$router->route("s.create")?>">Criar Quiz</a>
 
             </div>
+            
 
        </nav>
     </header>
