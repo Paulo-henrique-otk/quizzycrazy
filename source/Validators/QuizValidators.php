@@ -2,9 +2,9 @@
 namespace Source\Validators;
 
 class QuizValidators{
-public $verificador;
+public $verificador=0;
 public  function validateNameAutor(string $nameAutor){
-if(strlen($nameAutor)>1){
+if(strlen($nameAutor)>5){
 return $nameAutor;
 $this->verificador++;
 }else{
