@@ -23,7 +23,7 @@
  </main>
 
  <footer>
-     <h2>&copy;2020-Direitos Reservados Ao QuizzyCrazy</h2>
+     <h2>&copy;<?=date("Y")?>-Direitos Reservados Ao QuizzyCrazy</h2>
  </footer>
 </body>
 </html>

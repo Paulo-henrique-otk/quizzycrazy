@@ -58,7 +58,7 @@
        <?php endif; ?>
    </main> 
 <footer>
-    <h4>&copy;2020-Direitos Reservados Ao QuizzyCrazy</h4>
+    <h4>&copy;<?=date("Y")?>-Direitos Reservados Ao QuizzyCrazy</h4>
 </footer>
  <script src="<?=asset('js/jquery-3.5.1.min.js')?>"></script> 
  <script src="<?=asset('js/allquizes.js')?>"> </script> 

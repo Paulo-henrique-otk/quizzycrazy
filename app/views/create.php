@@ -207,7 +207,7 @@
         <input type="text" name="resposta21" id="resposta21">
         <p>Correta?</p>
         <p>Sim</p>
-        <input type="radio" name="status21" >
+        <input type="radio" name="status5" >
        
         <label for="resposta22"> 2° Resposta :</label>
         <input type="text" name="resposta22" id="resposta22">
@@ -242,7 +242,7 @@
   </main>
 
   <footer>
-    <h4>&copy;2020-Direitos Reservados Ao QuizzyCrazy </h4>
+    <h4>&copy;<?=date("Y")?>-Direitos Reservados Ao QuizzyCrazy </h4>
   </footer>
   <script src="<?=asset("js/jquery-3.5.1.min.js")?>"></script>
   <script src="<?=asset("js/create.js")?>"></script>

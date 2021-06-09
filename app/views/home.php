@@ -104,7 +104,7 @@
         <a href="<?=$router->route("s.all")?>">Ver Todos</a>
     </main>
   <footer>
-  <h6>&copy;2020-Direitos Resevardos Ao QuizzyCrazy.</h6>
+  <h6>&copy;<?=date("Y")?>-Direitos Resevardos Ao QuizzyCrazy.</h6>
 
 
   </footer>
