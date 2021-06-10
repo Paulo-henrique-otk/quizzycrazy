@@ -15,13 +15,18 @@
         </nav>
     </header>
  <main>
+ <?php if ($nome):
+ ?>
     <h1>QuizzyCrazy:Sucesso Na Criação Do Quiz</h1>
-    <p>Obrigado {Nome} Por Criar Um Quiz,Fico Muito Agradecido Por Ajudar Este Site A Ter Mais Conteúdo
+    <p>Obrigado <?=$nome?> Por Criar Um Quiz,Fico Muito Agradecido Por Ajudar Este Site A Ter Mais Conteúdo
     Para Que Voçê e Os Outros Usuários Possam Aproveitar e Se Divertir.Muito Obrigado.   
     </p>
     <img src="<?=asset('images/obrigado-transformando-sonhos-em-resultados.png')?>" alt="Imagem Mostrando sucesso na criação do quiz ">
  </main>
-
+<?php else: 
+$router->redirect("s.create");
+endif;
+?>
  <footer>
      <h2>&copy;<?=date("Y")?>-Direitos Reservados Ao QuizzyCrazy</h2>
  </footer>
