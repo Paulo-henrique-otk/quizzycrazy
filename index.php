@@ -15,8 +15,8 @@ $router->get("/create","Screens:create","s.create");
 $router->get("/all","Screens:allquizes","s.all");
 $router->get("/sucess","Screens:sucess","s.sucess");
 $router->get("/play/{code}","Screens:play","s.play");
-$router->get("/search/{busca}","QuizController:searchGet","q.search.get");
 //Post Routes
+$router->post("/note","QuizController:Verifynote","q.note");
 $router->post("/search","QuizController:search","q.search.post");
 $router->post("/save","QuizController:saveQuiz","save.q");
 //Error Route

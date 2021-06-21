@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <link rel="icon" href="../assets/icons/aplaudindo.svg" type="image/x-icon">
-  <link rel="stylesheet" href="../assets/css/goodPerformance.css">
+  <link rel="icon" href="<?=asset("../assets/icons/aplaudindo.svg")?>" type="image/x-icon">
+  <link rel="stylesheet" href="<?=asset("../assets/css/goodPerformance.css")?>">
   <meta charset="UTF-8">
   <meta name="author" content="Paulo Henrique">
   <meta name="robots" content="noindex"> 
@@ -14,22 +14,22 @@
   <main class="information">
     <h1 class="information__title roll-in-blurred-left">QuizzyCrazy:Pontuação Boa &#x270C</h1>
     <section class="section">
-      <img class="section__image last__image slit-in-vertical" src="../assets/images/R0ab17989bb33bd13fcc720dd3b55a8de.gif" alt="Personagens engraçados dando parabens">
-      <img class="section__image slit-in-vertical"src="../assets/images/Rb9947287fb67e1b5db8a4d87809862f8.gif" alt="menina animada comemorando">
-      <img class="section__image slit-in-horizontal" src="../assets/images/anime-congratulations-gif-2.gif" alt="menina dando parabens com as mãos">
-      <img class="section__image slit-in-horizontal" src="../assets/images/tumblr_niwsfddqjm1spav39o1_500.gif" alt="menina dando legal e parabenizando">
+      <img class="section__image last__image slit-in-vertical" src="<?=asset("../assets/images/R0ab17989bb33bd13fcc720dd3b55a8de.gif")?>" alt="Personagens engraçados dando parabens">
+      <img class="section__image slit-in-vertical"src="<?=asset("../assets/images/Rb9947287fb67e1b5db8a4d87809862f8.gif")?>" alt="menina animada comemorando">
+      <img class="section__image slit-in-horizontal" src="<?=asset("../assets/images/anime-congratulations-gif-2.gif")?>" alt="menina dando parabens com as mãos">
+      <img class="section__image slit-in-horizontal" src="<?=asset("../assets/images/tumblr_niwsfddqjm1spav39o1_500.gif")?>" alt="menina dando legal e parabenizando">
     </section>
 
   </main>
 
   <article class="text">
     <p class="text__title ">Nota: </p>
-    <p class="text__title u-color-yellow">{}</p>
+    <p class="text__title u-color-yellow"><?=$note?></p>
     <p class="text__description ">Parabens pela Pontuação,Voçê provou que é um verdadeiro guerreiro de classe alta.</p>
-    <img class="section__image" src="../assets/images/ss4.gif" alt="Goku Super Sayajin 4">
+    <img class="section__image" src="<?=asset("../assets/images/ss4.gif")?>" alt="Goku Super Sayajin 4">
   </article> 
   <div class="home">
-  <a href="home.html" class="home__link link__body">Home</a>
+  <a href="<?=$router->route("s.home")?>" class="home__link link__body">Home</a>
 
   </div>
   

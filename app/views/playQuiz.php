@@ -7,19 +7,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="author" content="Paulo Henrique">
   <meta name="robots" content="index">
-  <meta name="description" content="{Description}">
+  <meta name="description" content="<?=$quiz->descricao?>">
    <meta property="og:locale" content="pt-BR">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="QuizzyCrazy">
-    <meta property="og:title" content="QuizzyCrazy : {QuizName}">
-    <meta property="og:description" content="{Description}">
+    <meta property="og:title" content="QuizzyCrazy : <?=$quiz->nome_quiz?>">
+    <meta property="og:description" content="<?=$quiz->descricao?>">
     <meta property="og:url" content="">
     <meta propery="og:image" content="">
     <meta itemprop="name" content="QuizzyCrazy">
-    <meta itemprop="description" content="{Description}">
+    <meta itemprop="description" content="<?=$quiz->descricao?>">
     <meta itemprop="image" content="">
-    <meta name="twitter:title" content="QuizzyCrazy : {QuizName}">
-    <meta name="twitter:description" content={Description}>
+    <meta name="twitter:title" content="QuizzyCrazy : <?=$quiz->nome_quiz?>">
+    <meta name="twitter:description" content=<?=$quiz->descricao?>>
    <meta name="twitter:url" content="">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:image" content="">
@@ -42,10 +42,11 @@
     <h4 class="quiz__title"><?=$quiz->nome_autor?></h4>
     <p class="quiz__title quiz__description"><?=$quiz->descricao?></p>
     <img class=" u-max-width-100 u-clip-path-circle" src="<?=asset('images/attack-on-titan-season-3-characters-poster.jpg"')?>" alt="imagem do Quiz {quizname}"  >
-   <form action="" method="post" class="quiz__form">
+   <form action="<?=$router->route("q.note")?>" method="post" class="quiz__form">
+   <input type="hidden" name="code" value="<?=$quiz->code?>">
     <p class="quiz__question"><?=$quiz->pergunta1?></p>
     <label for="resposta1" class="quiz__answer"><?=$quiz->resposta1?></label>
-    <input type="radio" name="resposta1" id="resposta1" value="<?=$quiz->resposta1?>">
+    <input type="radio"  name="resposta1" id="resposta1" value="<?=$quiz->resposta1?>">
     <label for="resposta2" class="quiz__answer"><?=$quiz->resposta2?></label>
     <input type="radio" name="resposta1" id="resposta2" value="<?=$quiz->resposta2?>">
     <label for="resposta3" class="quiz__answer"><?=$quiz->resposta3?></label>
