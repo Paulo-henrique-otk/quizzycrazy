@@ -50,7 +50,7 @@
     <div class="error"> <p><?=$error?></p></div>
     <?php else:
     endif?>
-    <form class="form" action="<?=$router->route("save.q")?>" method="post">
+    <form class="form" action="<?=$router->route("save.q")?>" method="post" enctype="multipart/form-data">
       <img src="<?=asset("images/wordpress-quiz-plugins-1024x512.png")?>" alt="Imagem Do Formulario de Criação do QuizzyCrazy" title="Imagem Do Formulario de Criação do QuizzyCrazy">
      
         <label for="na">Autor Do Quiz :</label>

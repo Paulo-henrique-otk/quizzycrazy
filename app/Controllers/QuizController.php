@@ -1,17 +1,22 @@
 <?php
 namespace App\Controllers;
 use App\Controllers\Controller;
+use CoffeeCode\Uploader\Image;
+use Exception;
+use Source\Validators\imageValidator;
 use Source\Validators\NoteValidators;
 use Source\Validators\QuizValidators;
 
 class QuizController extends Controller{
 private $QuizValidator;
 private $noteValidators;
+private $imageValidate;
 function __construct($router)
 {
 parent::__construct($router);
 $this->QuizValidator = new QuizValidators();
 $this->noteValidators = new NoteValidators();
+$this->imageValidate = new imageValidator();
 }
 public function search(array $data){
 $quiz = ($this->MakeInstanceOfQuiz())
@@ -20,12 +25,13 @@ $quiz = ($this->MakeInstanceOfQuiz())
 echo $this->showScreen("search",["quiz"=>$quiz]);
 }
 public function saveQuiz(array $data){
+$imagemForm = new Image("images","images");
 $quiz = $this->MakeInstanceOfQuiz();
 $quiz->code = uniqid(rand(),true);
-$quiz->name_autor = $this->QuizValidator->validateNameAutor($data["nomeAut"]);
-$quiz->name_quiz = $this->QuizValidator->validateNameQuiz($data["nomeQuiz"]);
+$quiz->nome_autor = $this->QuizValidator->validateNameAutor($data["nomeAut"]);
+$quiz->nome_quiz = $this->QuizValidator->validateNameQuiz($data["nomeQuiz"]);
 $quiz->descricao = $this->QuizValidator->validateDescription($data["Description"]);
-$quiz->image = "sem Imagem";
+$quiz->image = $this->imageValidate->validateImage($_FILES,$imagemForm,uniqid(rand(),true));
 
 $quiz->pergunta1 = $this->QuizValidator->validateQuestion($data["pergunta1"]);
 $quiz->resposta1 =  $this->QuizValidator->validateAnswer($data["resposta1"]); 
@@ -67,12 +73,13 @@ $quiz->resposta24 =   $this->QuizValidator->validateAnswer($data["resposta24"]);
 $quiz->resposta25 =   $this->QuizValidator->validateAnswer($data["resposta25"]);
 $quiz->status5 = $this->QuizValidator->validateStatus($data["status5"]);
 
-if($this->QuizValidator->GetVerificador()<38){
+if($this->QuizValidator->GetVerificador()<38 
+&& $this->imageValidate->GetValidateImageNumber()== 404){
 $error = "Digite o Comprimento correto dos Campos";
- $this->router->redirect("s.create",["error"=>$error]); 
+echo $this->showScreen("create",["error"=>$error]); 
 }else{
 $quiz->save();
-echo $this->showScreen("s.sucess",["nome"=>$quiz->name_autor]); 
+echo $this->showScreen("sucess",["nome"=>$quiz->name_autor]); 
 }
 } 
 public function Verifynote(array $data){
@@ -89,12 +96,13 @@ if($this->noteValidators->ValidateNote($quiz->status1,$resposta1,$data["resposta
 && $this->noteValidators->ValidateNote($quiz->status5,$resposta5,$data["resposta5"])){
     $note = $this->noteValidators->GetNote();
     if($note>=6){
+        var_dump($quiz->status4);
     echo $this->showScreen("goodPerformance",["note"=>$note]);
     }else{
     echo $this->showScreen("badPerformance",["note"=>$note]);
     }
 }else{
-$this->router->redirect("s.play",["code"=>$data["code"]]);
+var_dump($this->noteValidators->ValidateNote($quiz->status1,$resposta1,$data["resposta1"]));
 }
 }
 }

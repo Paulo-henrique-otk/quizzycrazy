@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <link rel="canonical" href="<?=URL?>">
     <link rel="stylesheet" href="<?= asset("css/home.css")?>">
@@ -84,7 +83,7 @@
         foreach ($quizes as $quiz) :
         ?>       
         <div class="conteudo">
-            <img src="<?=asset('images/attack-on-titan-season-3-characters-poster.jpg')?>" alt="Imagem Do QUiz <?=$quiz->nome_quiz?>" title="<?=$quiz->nome_quiz?>">
+            <img src="<?=$quiz->image?>" alt="Imagem Do QUiz <?=$quiz->nome_quiz?>" title="<?=$quiz->nome_quiz?>">
             <strong><?=$quiz->nome_autor?></strong>
              <h5><?=$quiz->nome_quiz?></h5>
              <p><?=$quiz->descricao?></p>

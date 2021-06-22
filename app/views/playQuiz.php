@@ -41,7 +41,7 @@
     <h3 class="quiz__title u-color-brown"><?=$quiz->nome_quiz?></h3>
     <h4 class="quiz__title"><?=$quiz->nome_autor?></h4>
     <p class="quiz__title quiz__description"><?=$quiz->descricao?></p>
-    <img class=" u-max-width-100 u-clip-path-circle" src="<?=asset('images/attack-on-titan-season-3-characters-poster.jpg"')?>" alt="imagem do Quiz {quizname}"  >
+    <img class=" u-max-width-100 u-clip-path-circle" src="<?=URL . "/" . $quiz->image?>" alt="imagem do Quiz:<?=$quiz->nome_quiz?>"  >
    <form action="<?=$router->route("q.note")?>" method="post" class="quiz__form">
    <input type="hidden" name="code" value="<?=$quiz->code?>">
     <p class="quiz__question"><?=$quiz->pergunta1?></p>

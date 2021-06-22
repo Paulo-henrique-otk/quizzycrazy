@@ -40,7 +40,7 @@
         foreach($quizes as $quiz):
         ?>
        <div class="Quiz">
-       <img src="<?=asset('images/itachi.png')?>" alt="Imagem do Quiz :<?=$quiz->nome_quiz?>}" title=" <?=$quiz->nome_quiz?>">
+       <img src="<?=$quiz->image?>" alt="Imagem do Quiz :<?=$quiz->nome_quiz?>}" title=" <?=$quiz->nome_quiz?>">
        <h2><?=$quiz->nome_quiz?></h2>
        <h3><?=$quiz->nome_autor?></h3>
        <p><?=$quiz->descricao?></p>
