@@ -73,13 +73,14 @@ $quiz->resposta24 =   $this->QuizValidator->validateAnswer($data["resposta24"]);
 $quiz->resposta25 =   $this->QuizValidator->validateAnswer($data["resposta25"]);
 $quiz->status5 = $this->QuizValidator->validateStatus($data["status5"]);
 
-if($this->QuizValidator->GetVerificador()<38 
+if($this->QuizValidator->GetVerificador()==38 
 && $this->imageValidate->GetValidateImageNumber()== 404){
-$error = "Digite o Comprimento correto dos Campos";
-echo $this->showScreen("create",["error"=>$error]); 
-}else{
 $quiz->save();
-echo $this->showScreen("sucess",["nome"=>$quiz->name_autor]); 
+echo $this->showScreen("sucess",["nome"=>$quiz->nome_autor]); 
+}
+else{
+$error = "Digite o Comprimento correto dos Campos";
+echo $this->showScreen("create",["error"=>$error]);
 }
 } 
 public function Verifynote(array $data){
@@ -96,13 +97,12 @@ if($this->noteValidators->ValidateNote($quiz->status1,$resposta1,$data["resposta
 && $this->noteValidators->ValidateNote($quiz->status5,$resposta5,$data["resposta5"])){
     $note = $this->noteValidators->GetNote();
     if($note>=6){
-        var_dump($quiz->status4);
     echo $this->showScreen("goodPerformance",["note"=>$note]);
     }else{
     echo $this->showScreen("badPerformance",["note"=>$note]);
     }
 }else{
-var_dump($this->noteValidators->ValidateNote($quiz->status1,$resposta1,$data["resposta1"]));
+$this->router->redirect("s.home");
 }
 }
 }

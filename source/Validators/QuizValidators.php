@@ -2,7 +2,7 @@
 namespace Source\Validators;
 
 class QuizValidators{
-private $verificador = 0;
+private int $verificador = 0;
 public function Verificar():void{
 $this->verificador++;
 }
@@ -30,19 +30,19 @@ return null;
 public function validateQuestion(string $question): string | null{
 if(strlen($question)>10){
 $this->Verificar();
-return $question;
+return $question . " ? ";
 }
 return null;
 }
 public function validateAnswer(string $answer): string | null{
-if (strlen($answer)>5) {
+if (strlen($answer)>3) {
 $this->Verificar();
 return $answer;
 }
 return null;
 }
 public function validateStatus(string $status): string | null{
-if (strlen($status)>1) {
+if (strlen($status)>5) {
 $this->Verificar();
 return $status;
 }

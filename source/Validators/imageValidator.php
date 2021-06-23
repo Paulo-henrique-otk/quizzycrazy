@@ -6,7 +6,7 @@ private int $ValideImageNumber;
 public function ValidateNumber():void{
 $this->ValideImageNumber = 404;
 }
-public function validateImage($imageFile,$image,$nome):string | null{
+public function validateImage(mixed $imageFile, mixed $image, mixed $nome):string | null{
 if($imageFile){
 $upload = $image->upload($imageFile["Arquivo"],$nome);
 $this->ValidateNumber();
@@ -14,7 +14,7 @@ return $upload;
 }
 return null;
 }    
-public function GetValidateImageNumber(){
+public function GetValidateImageNumber():int{
 return $this->ValideImageNumber;
 }
 }
