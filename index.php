@@ -13,7 +13,6 @@ $router->group(null);
 $router->get("/","Screens:home","s.home");
 $router->get("/create","Screens:create","s.create");
 $router->get("/all","Screens:allquizes","s.all");
-$router->get("/sucess","Screens:sucess","s.sucess");
 $router->get("/play/{code}","Screens:play","s.play");
 //Post Routes
 $router->post("/note","QuizController:Verifynote","q.note");
