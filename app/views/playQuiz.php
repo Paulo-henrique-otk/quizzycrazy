@@ -111,7 +111,7 @@
 
 
   <footer class="c-body c-footer">
-    <h5 class="c-title c-footer-title">&copy;2020-Direitos Resevardos Ao QuizzyCrazy.</h5>
+    <h5 class="c-title c-footer-title">&copy;<?=date("Y")?>-Direitos Resevardos Ao QuizzyCrazy.</h5>
   </footer>
  
   

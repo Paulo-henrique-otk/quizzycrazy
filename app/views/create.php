@@ -46,8 +46,10 @@
       Construir o conteúdo deste Site, Sua Ajuda é Muito Importante Para Que Este Site Continue Crescendo 
     Confira Embaixo o Formulário para Criar um Quiz  : 
     </p>
-
-    <div class="error"> <p> {Message}</p></div>
+    <?php if(!empty($error)): ?>
+    <div class="error"> <p><?=$error?></p></div>
+    <?php else:
+    endif?>
     <form class="form" action="<?=$router->route("save.q")?>" method="post">
       <img src="<?=asset("images/wordpress-quiz-plugins-1024x512.png")?>" alt="Imagem Do Formulario de Criação do QuizzyCrazy" title="Imagem Do Formulario de Criação do QuizzyCrazy">
      

@@ -19,8 +19,8 @@ echo $this->showScreen("search",["quiz"=>$quiz]);
 public function saveQuiz(array $data){
 $quiz = $this->MakeInstanceOfQuiz();
 $quiz->code = uniqid(rand(),true);
-$quiz->nome_autor = $this->QuizValidator->validateNameAutor($data["nomeAut"]);
-$quiz->nome_quiz = $this->QuizValidator->validateNameQuiz($data["nomeQuiz"]);
+$quiz->name_autor = $this->QuizValidator->validateNameAutor($data["nomeAut"]);
+$quiz->name_quiz = $this->QuizValidator->validateNameQuiz($data["nomeQuiz"]);
 $quiz->descricao = $this->QuizValidator->validateDescription($data["Description"]);
 $quiz->image = "sem Imagem";
 
@@ -65,10 +65,11 @@ $quiz->resposta25 =   $this->QuizValidator->validateAnswer($data["resposta25"]);
 $quiz->status5 = $this->QuizValidator->validateStatus($data["status5"]);
 
 if($this->QuizValidator->returnVerificador()<38){
- $this->router->redirect("s.create"); 
+$error = "Digite o Comprimento correto dos Campos";
+ $this->router->redirect("s.create",["error"=>$error]); 
 }else{
 $quiz->save();
-$this->router->redirect("s.sucess"); 
+$this->router->redirect("s.sucess",["nome"=>$quiz->name_autor]); 
 }
 } 
 }
