@@ -14,7 +14,7 @@
     ]
 ]);
 
-define("URL","http://".$_SERVER["SERVER_NAME"]."/quizzycrazy");
+define("URL","http://".$_SERVER["SERVER_NAME"]);
 
 function asset(string $path = null):string{
   if($path){

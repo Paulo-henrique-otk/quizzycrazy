@@ -10,8 +10,8 @@ class Screens extends Controller{
   parent::__construct($router);
   }
   public function home():void{
-  $quizes = $this->MakeInstanceOfQuiz()->find()->limit(15)->order("code DESC")->fetch(true);
-  echo $this->showScreen("home",["quizes"=>$quizes]);
+    $quizes =$this->MakeInstanceOfQuiz()->find()->limit(15)->order("code DESC")->fetch(true);
+    echo $this->showScreen("home",["quizes"=>$quizes]);
   }
   public function create():void{
   echo $this->showScreen("create");

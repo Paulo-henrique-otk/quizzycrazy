@@ -78,8 +78,10 @@
 
         <img src="<?= asset("images/shutterstock_1214717467-900x506-1 .jpg")?>" alt="Imagem principal do QuizzyCrazy" title="Imagem principal do QuizzyCrazy">
 
-        <h4>Confira Aqui Embaixo Os Quizes Novos e Criados Recentemente No QuizzyCrazy: </h4>
-        <?php  if($quizes):
+        <?php  if($quizes!=null):
+        ?>
+                <h4>Confira Aqui Embaixo Os Quizes Novos e Criados Recentemente No QuizzyCrazy: </h4>
+        <?php
         foreach ($quizes as $quiz) :
         ?>       
         <div class="conteudo">
