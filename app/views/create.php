@@ -50,15 +50,15 @@
     <div class="error"> <p><?=$error?></p></div>
     <?php else:
     endif?>
-    <form class="form" action="<?=$router->route("save.q")?>" method="post">
+    <form class="form" action="<?=$router->route("save.q")?>" method="post" enctype="multipart/form-data">
       <img src="<?=asset("images/wordpress-quiz-plugins-1024x512.png")?>" alt="Imagem Do Formulario de Criação do QuizzyCrazy" title="Imagem Do Formulario de Criação do QuizzyCrazy">
      
         <label for="na">Autor Do Quiz :</label>
-        <input type="text" name="nomeAut" id="na" placeholder="Autor Do Quiz">
+        <input type="text" name="nomeAut" id="na" placeholder="Autor Do Quiz" minlength="3">
      
    
         <label for="nq">Nome Do Quiz :</label>
-        <input type="text" name="nomeQuiz" id="nq" placeholder="Nome Do Quiz">
+        <input type="text" name="nomeQuiz" id="nq" placeholder="Nome Do Quiz" minlength="5">
      
    
         <label for="Desc">Descrição :</label>
@@ -67,23 +67,23 @@
         </textarea>
    
         <label for="pergunta1"> 1° Pergunta :</label>
-        <input type="text" name="pergunta1" id="pergunta1">
+        <input type="text" name="pergunta1" id="pergunta1" minlength="10">
         <label for="resposta1"> 1° Resposta :</label>
-        <input type="text" name="resposta1" id="resposta1">
+        <input type="text" name="resposta1" id="resposta1" minlength="3">
         <p>Correta?</p>
         <p>Sim</p>
-        <input type="radio" name="status1" value="resposta1" >
+        <input type="radio" name="status1" value="resposta1"  required>
         
         
         <label for="resposta2"> 2° Resposta :</label>
         <input type="text" name="resposta2" id="resposta2">
         <p>Correta?</p>
         <p>Sim</p>
-        <input type="radio" name="status1" value="resposta2">
+        <input type="radio" name="status1" value="resposta2"  required>
 
         
         <label for="resposta3"> 3° Resposta :</label>
-        <input type="text" name="resposta3" id="resposta3">
+        <input type="text" name="resposta3" id="resposta3"  required>
         <p>Correta?</p>
         <p>Sim</p>
         <input type="radio" name="status1" value="resposta3">
@@ -93,14 +93,14 @@
         <input type="text" name="resposta4" id="resposta4">
         <p>Correta?</p>
         <p>Sim</p>
-        <input type="radio" name="status1" value="resposta4" >
+        <input type="radio" name="status1" value="resposta4"  required >
 
       
         <label for="resposta5"> 5° Resposta :</label>
         <input type="text" name="resposta5" id="resposta5">
         <p>Correta?</p>
         <p>Sim</p>
-        <input type="radio" name="status1" value="resposta5" >
+        <input type="radio" name="status1" value="resposta5"  required>
        
         
         
@@ -110,31 +110,31 @@
         <input type="text" name="resposta6" id="resposta6">
         <p>Correta?</p>
         <p>Sim</p>
-        <input type="radio" name="status2" value="resposta6" >
+        <input type="radio" name="status2" value="resposta6"  required >
        
         <label for="resposta7"> 2° Resposta :</label>
         <input type="text" name="resposta7" id="resposta7">
         <p>Correta?</p>
         <p>Sim</p>
-        <input type="radio" name="status2"value="resposta7" >
+        <input type="radio" name="status2"value="resposta7"  required>
 
         <label for="resposta8"> 3° Resposta :</label>
         <input type="text" name="resposta8" id="resposta8">
         <p>Correta?</p>
         <p>Sim</p>
-        <input type="radio" name="status2" value="resposta8">
+        <input type="radio" name="status2" value="resposta8"  required>
        
         <label for="resposta9"> 4° Resposta :</label>
         <input type="text" name="resposta9" id="resposta9">
         <p>Correta?</p>
         <p>Sim</p>
-        <input type="radio" name="status2"value="resposta9" >
+        <input type="radio" name="status2"value="resposta9"  required>
         
         <label for="resposta10"> 5° Resposta :</label>
         <input type="text" name="resposta10" id="resposta10">
         <p>Correta?</p>
         <p>Sim</p>
-        <input type="radio" name="status2" value="resposta10">
+        <input type="radio" name="status2" value="resposta10"  required>
 
         
         <label for="pergunta3"> 3° Pergunta :</label>
@@ -143,31 +143,31 @@
         <input type="text" name="resposta11" id="resposta11">
         <p>Correta?</p>
         <p>Sim</p>
-        <input type="radio" name="status3" value="resposta11">
+        <input type="radio" name="status3" value="resposta11"  required>
         
         <label for="resposta12"> 2° Resposta :</label>
         <input type="text" name="resposta12" id="resposta12">
         <p>Correta?</p>
         <p>Sim</p>
-        <input type="radio" name="status3"value="resposta12" >
+        <input type="radio" name="status3"value="resposta12"  required>
        
         <label for="resposta13"> 3° Resposta :</label>
         <input type="text" name="resposta13" id="resposta13">
         <p>Correta?</p>
         <p>Sim</p>
-        <input type="radio" name="status3" value="resposta13">
+        <input type="radio" name="status3" value="resposta13"  required>
        
         <label for="resposta14"> 4° Resposta :</label>
         <input type="text" name="resposta14" id="resposta14">
         <p>Correta?</p>
         <p>Sim</p>
-        <input type="radio" name="status3"value="resposta14" >
+        <input type="radio" name="status3"value="resposta14"  required >
        
         <label for="resposta15"> 5° Resposta :</label>
         <input type="text" name="resposta15" id="resposta15">
         <p>Correta?</p>
         <p>Sim</p>
-        <input type="radio" name="status3" value="resposta15">
+        <input type="radio" name="status3" value="resposta15"  required>
        
         
         <label for="pergunta4"> 4° Pergunta :</label>
@@ -176,31 +176,31 @@
         <input type="text" name="resposta16" id="resposta16">
         <p>Correta?</p>
         <p>Sim</p>
-        <input type="radio" name="status4" value="resposta16">
+        <input type="radio" name="status4" value="resposta16"  required>
         
         <label for="resposta17"> 2° Resposta :</label>
         <input type="text" name="resposta17" id="resposta17">
         <p>Correta?</p>
         <p>Sim</p>
-        <input type="radio" name="status4" value="resposta17">
+        <input type="radio" name="status4" value="resposta17"  required>
         
         <label for="resposta18"> 3° Resposta :</label>
         <input type="text" name="resposta18" id="resposta18">
         <p>Correta?</p>
         <p>Sim</p>
-        <input type="radio" name="status4" value="resposta18" >
+        <input type="radio" name="status4" value="resposta18"  required>
        
         <label for="resposta19"> 4° Resposta :</label>
         <input type="text" name="resposta19" id="resposta19">
         <p>Correta?</p>
         <p>Sim</p>
-        <input type="radio" name="status4"value="resposta19" >
+        <input type="radio" name="status4"value="resposta19"  required>
        
         <label for="resposta20"> 5° Resposta :</label>
         <input type="text" name="resposta20" id="resposta20">
         <p>Correta?</p>
         <p>Sim</p>
-        <input type="radio" name="status4" value="resposta20">
+        <input type="radio" name="status4" value="resposta20"  required>
         
         
         <label for="pergunta5"> 5° Pergunta :</label>
@@ -209,34 +209,34 @@
         <input type="text" name="resposta21" id="resposta21">
         <p>Correta?</p>
         <p>Sim</p>
-        <input type="radio" name="status5" >
+        <input type="radio" name="status5" value="resposta21"  required>
        
         <label for="resposta22"> 2° Resposta :</label>
         <input type="text" name="resposta22" id="resposta22">
         <p>Correta?</p>
         <p>Sim</p>
-        <input type="radio" name="status5"value="resposta22" >
+        <input type="radio" name="status5"value="resposta22"  required>
         
         <label for="resposta23"> 3° Resposta :</label>
         <input type="text" name="resposta23" id="resposta23">
         <p>Correta?</p>
         <p>Sim</p>
-        <input type="radio" name="status5" value="resposta23" >
+        <input type="radio" name="status5" value="resposta23"  required>
         
         <label for="resposta24"> 4° Resposta :</label>
         <input type="text" name="resposta24" id="resposta24">
         <p>Correta?</p>
         <p>Sim</p>
-        <input type="radio" name="status5"  value="resposta24" >
+        <input type="radio" name="status5"  value="resposta24"  required>
        
         <label for="resposta25"> 5° Resposta :</label>
         <input type="text" name="resposta25" id="resposta25">
         <p>Correta?</p>
         <p>Sim</p>
-        <input type="radio" name="status5"  value="resposta25"  >
+        <input type="radio" name="status5"  value="resposta25"   required>
         <p>Imagem Do Quiz:</p>
         <label  for="arquivo"><img class="imgicon jello-vertical" src="<?=asset("images/upload-big-arrow.png")?>" alt="Botão de Upload" title="Botão de Upload"></label>
-        <input type="file" name="Arquivo" id="arquivo">
+        <input type="file" name="Arquivo" id="arquivo" required>
     <button type="submit">Criar</button>
       
 

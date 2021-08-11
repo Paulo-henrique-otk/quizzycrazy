@@ -15,7 +15,7 @@
     <h1 class="content__title u-color-red">QuizzyCrazy:<?=$quiz->nome_quiz?></h1>
     <h2 class="content__title u-color-green"><?=$quiz->nome_autor?></h2>
     <p class="content__description"><?=$quiz->descricao?></p>
-    <img class="content__image" src="<?=asset('images/attack-on-titan-season-3-characters-poster.jpg')?>" alt="">
+    <img class="content__image" src="<?=$quiz->image?>" alt="">
     <article class="content__article"><a href="<?=$router->route("s.play",["code"=>$quiz->code])?>" class="content__link">Jogar</a></article>
   
   </main>
