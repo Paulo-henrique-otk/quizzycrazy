@@ -6,3 +6,4 @@ services:
             - 81:80
         volumes: 
             - .:/opt/lampp/htdocs/quizzycrazy  
+        

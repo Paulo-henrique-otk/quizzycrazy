@@ -1,5 +1,14 @@
 RewriteEngine On
-#Options All -Indexes
+Options -Indexes
+
+
+<FilesMatch "\.json$">
+Deny from All
+</FilesMatch>
+<FilesMatch "\.lock$">
+Deny from All
+</FilesMatch>
+
 
 
 
