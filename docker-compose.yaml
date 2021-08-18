@@ -3,7 +3,7 @@ services:
     xampp:
         image: tomsik68/xampp
         ports: 
-            - 81:80
+            - 80:80
         volumes: 
             - .:/opt/lampp/htdocs/quizzycrazy  
         
